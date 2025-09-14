@@ -3,34 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tableau de bord interactif</title>
+  <title>FocusHub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Bienvenue, Erwan 👋</h1>
+    <h1>FocusHub</h1>
     <button id="themeToggle">🌙</button>
   </header>
 
   <main>
-    <section class="widget" id="clockWidget">
-      <h2>🕒 Horloge</h2>
-      <div id="clock"></div>
+    <section class="overview">
+      <div id="date"></div>
+      <div id="weather">🌤️ Chargement météo...</div>
+      <div id="mood">😌 Humeur : Positif</div>
     </section>
 
-    <section class="widget" id="weatherWidget">
-      <h2>🌤️ Météo fictive</h2>
-      <p id="weather">Chargement...</p>
-    </section>
-
-    <section class="widget" id="tasksWidget">
-      <h2>✅ Tâches</h2>
+    <section class="tasks">
+      <h2>Mes tâches</h2>
       <input type="text" id="taskInput" placeholder="Nouvelle tâche..." />
+      <select id="priority">
+        <option value="low">Faible</option>
+        <option value="medium">Moyenne</option>
+        <option value="high">Haute</option>
+      </select>
       <button id="addTask">Ajouter</button>
       <ul id="taskList"></ul>
     </section>
+
+    <section class="stats">
+      <h2>📊 Statistiques</h2>
+      <p id="stats">Tâches accomplies : 0</p>
+    </section>
+
+    <section class="wellness">
+      <h2>🧘 Pause respiration</h2>
+      <button id="startBreath">Commencer</button>
+      <div id="breathGuide"></div>
+    </section>
   </main>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
