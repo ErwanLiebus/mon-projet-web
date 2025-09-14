@@ -1,0 +1,59 @@
+:root {
+  --bg: #f0f0f0;
+  --text: #222;
+  --accent: #0077ff;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --text: #eee;
+  --accent: #00c6ff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s, color 0.4s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--accent);
+  color: white;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.widget {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+body.dark .widget {
+  background: #2c2c2c;
+}
+
+.widget:hover {
+  transform: scale(1.02);
+}
+
+#taskList li {
+  margin: 0.5rem 0;
+  list-style: none;
+  padding: 0.5rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 4px;
+}

@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Mon premier script</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableau de bord interactif</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Bienvenue dans le monde du code !</h1>
-  <button onclick="saluer()">Clique-moi</button>
+  <header>
+    <h1>Bienvenue, Erwan 👋</h1>
+    <button id="themeToggle">🌙</button>
+  </header>
 
-  <script>
-    function saluer() {
-      alert("Salut Erwan ! Tu viens de lancer ton premier script 🎉");
-    }
-  </script>
+  <main>
+    <section class="widget" id="clockWidget">
+      <h2>🕒 Horloge</h2>
+      <div id="clock"></div>
+    </section>
+
+    <section class="widget" id="weatherWidget">
+      <h2>🌤️ Météo fictive</h2>
+      <p id="weather">Chargement...</p>
+    </section>
+
+    <section class="widget" id="tasksWidget">
+      <h2>✅ Tâches</h2>
+      <input type="text" id="taskInput" placeholder="Nouvelle tâche..." />
+      <button id="addTask">Ajouter</button>
+      <ul id="taskList"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
